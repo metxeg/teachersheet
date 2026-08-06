@@ -9,8 +9,18 @@ app = Flask(__name__)
 @app.route('/api/index.py', methods=['GET', 'POST'])
 def handler():
     try:
+        # Verificar que sea POST
+        if request.method == 'GET':
+            return jsonify({"error": "Esta ruta requiere POST"}), 405
+            
+        # Obtener los datos JSON
         data = request.get_json()
+        if not data:
+            return jsonify({"error": "No se recibieron datos JSON"}), 400
+            
         receta_info = data.get('receta', '')
+        if not receta_info:
+            return jsonify({"error": "Falta el campo 'receta'"}), 400
 
         prompt = f"""
         Eres un asistente de cocina. Genera una ficha técnica detallada para: {receta_info}.
