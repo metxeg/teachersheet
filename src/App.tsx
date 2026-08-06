@@ -246,7 +246,7 @@ export default function App() {
   const handleGenerateImage = async (recipe: RecipeSheet) => {
     setIsGeneratingImage(true);
     try {
-      const res = await fetch('/api', {
+      const res = await fetch('/api/index.py', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
