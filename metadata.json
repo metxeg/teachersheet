@@ -1,0 +1,6 @@
+{
+  "name": "TeacherSheet - Fichas Técnicas Gastronómicas",
+  "description": "Generador y gestor de fichas técnicas para docentes de cocina y pastelería con IA, cálculo de costos, escalado dinámico, alérgenos y notas pedagógicas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
