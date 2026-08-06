@@ -5,8 +5,8 @@ from openai import OpenAI
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
-@app.route('/api/index.py', methods=['POST'])
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/api/index.py', methods=['GET', 'POST'])
 def handler():
     try:
         data = request.get_json()
