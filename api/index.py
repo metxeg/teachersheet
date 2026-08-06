@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/api/index.py', methods=['GET', 'POST'])
+@app.route('/api', methods=['POST'])
 def handler():
     try:
         # Verificar que sea POST
